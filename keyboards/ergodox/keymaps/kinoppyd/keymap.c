@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   `    |   1  |   2  |   3  |   4  |   5  |   6  |           |   7  |   8  |   9  |   0  |   =  |  F7  |  F10   |
+ * |   `    |   1  |   2  |   3  |   4  |   5  |   6  |           |   7  |   8  |   9  |   0  |   -  |   =  |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -19,14 +19,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  L2  |           | Tab  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  /   |   /    |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | Ctrl |  Cmd | Cmd  |  Alt |  BS  |                                       |  L2  |   -  |  [   |   ]  |  Alt |
+ *   | Ctrl |  Cmd | Cmd  |  Alt |  BS  |                                       |  L2  |      |  [   |   ]  |  Alt |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |  F8  |       |      |        |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |      |       |      |        |      |
+ *                                 |      |      |      |       |  F10 |        |      |
  *                                 | Space|Space |------|       |------|  Esc   |Enter |
- *                                 |      |      |      |       |      |        |      |
+ *                                 |      |      |      |       |  F7  |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -42,14 +42,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                KC_NO,
                                                KC_SPC, KC_SPC, KC_NO,
         // right hand
-             KC_7,        KC_8,   KC_9,    KC_0,   KC_EQL, KC_F7,    KC_F10,
+             KC_7,        KC_8,   KC_9,    KC_0,   KC_MINS,KC_EQL,   KC_NO,
              MO(SYMB),    KC_Y,   KC_U,    KC_I,   KC_O,   KC_P,     KC_BSLS,
                           KC_H,   KC_J,    KC_K,   KC_L,   KC_SCLN,  KC_QUOT,
              KC_TAB,      KC_N,   KC_M,    KC_COMM,KC_DOT, KC_SLSH,  KC_SLSH,
-                                  MO(MDIA),KC_MINS,KC_LBRC,KC_RBRC,  KC_LALT,
+                                  MO(MDIA),KC_NO  ,KC_LBRC,KC_RBRC,  KC_LALT,
              KC_NO,          KC_NO,
-             KC_NO,
-             KC_NO,  KC_ESC, KC_ENT
+             KC_F10,
+             KC_F7,  KC_ESC, KC_ENT
     ),
 /* Keymap 1: Symbol Layer
  *
